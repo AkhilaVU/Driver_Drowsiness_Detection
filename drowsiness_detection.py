@@ -19,3 +19,15 @@ bottomLeftCornerOfText = (10,400)
 fontScale              = 1
 fontColor              = (255,255,255)
 lineType               = 1
+
+while True:
+    ret, frame = cam.read()
+     #cv2.imshow("test", frame)
+
+    k = cv2.waitKey(1)
+
+    if k%256 == 27:
+        # ESC pressed
+        print("Escape hit, closing...")
+        break
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
