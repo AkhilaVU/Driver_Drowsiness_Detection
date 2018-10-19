@@ -50,3 +50,5 @@ while True:
                     fontColor,
                     lineType)
     cv2.imshow("Faces found", frame)
+    cam.release()
+cv2.destroyAllWindows()
